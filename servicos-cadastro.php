@@ -6,8 +6,8 @@
     <form>
         <label>Serviço: <input></label> <br>
         <label>Descrição: <input></label> <br>
-        <label>Preço: <input></label> <br>
         <label>Categoria: <input></label> <br>
+        <label>Preço: <input></label> <br>
 
         <button>Salvar</button>
     </form>
