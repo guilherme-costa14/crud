@@ -32,6 +32,11 @@ while($linha = mysqli_fetch_assoc($resultado)){
     echo "<a href='servicos-excluir.php?id={$linha['id']}'>";
     echo "<img src='delete.png'>";
     echo "</a>";
+
+    echo " <a href='servicos-editar.php?id={$linha['id']}'>";
+    echo "<img src='edit.png'>";
+    echo "</a>";
+
     echo "</td>";
 
     echo "</tr>";
