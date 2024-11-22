@@ -13,16 +13,16 @@ while($linha = mysqli_fetch_assoc($resultado)){
     $categoria = $linha['categoria'];
 }
 
-echo $servico . $descricao . $preco . $categoria;
+mysqli_close($conexao);
 
 ?>
 <main>
     <h2>Editar serviço</h2>
     <form method="post" action="servicos-atualizar.php">
-        <label>Serviço: <input name = "servico"></label> <br>
-        <label>Descrição: <input name = "descricao"></label> <br>
-        <label>Preço: <input name = "preco"></label> <br>
-        <label>Categoria: <input name = "categoria"></label> <br>
+        <label>Serviço: <input name = "servico" value="<?=$servico;?>"></label> <br>
+        <label>Descrição: <input name = "descricao" value="<?=$descricao;?>"></label> <br>
+        <label>Preço: <input name = "preco" value="<?=$preco;?>"></label> <br>
+        <label>Categoria: <input name = "categoria" value="<?=$categoria;?>"></label> <br>
 
         <button type="submit">Salvar</button>
     </form>
