@@ -22,12 +22,18 @@ $sql = "select * from servicos";
 $resultado = mysqli_query($conexao, $sql);
 
 while($linha = mysqli_fetch_assoc($resultado)){
-    echo "<tr>";
-    echo "<td>" . $linha['servico'] . "</td>";
-    echo "<td>" . $linha['descricao'] . "</td>";
-    echo "<td>" . $linha['preco'] . "</td>";
-    echo "<td>" . $linha['categoria'] . "</td>";
-    echo "<td><img src='delete.png'></td>";
+    echo "<tr>"; // interpolação de string
+    echo "<td> {$linha['servico']} </td>";
+    echo "<td> {$linha['descricao']} </td>";
+    echo "<td> {$linha['preco']} </td>";
+    echo "<td> {$linha['categoria']} </td>";
+
+    echo "<td>";
+    echo "<a href='servicos-excluir.php'>";
+    echo "<img src='delete.png'>";
+    echo "</a>";
+    echo "</td>";
+
     echo "</tr>";
 }
 
