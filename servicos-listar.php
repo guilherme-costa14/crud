@@ -14,6 +14,7 @@ include "conexao.php";
         <th>DESCRIÇÃO</th>
         <th>PREÇO</th>
         <th>CATEGORIA</th>
+        <th>AÇÕES</th>
     </tr>
 <?php
 
@@ -26,6 +27,7 @@ while($linha = mysqli_fetch_assoc($resultado)){
     echo "<td>" . $linha['descricao'] . "</td>";
     echo "<td>" . $linha['preco'] . "</td>";
     echo "<td>" . $linha['categoria'] . "</td>";
+    echo "<td><img src='delete.png'></td>";
     echo "</tr>";
 }
 
