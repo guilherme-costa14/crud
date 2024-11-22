@@ -29,7 +29,7 @@ while($linha = mysqli_fetch_assoc($resultado)){
     echo "<td> {$linha['categoria']} </td>";
 
     echo "<td>";
-    echo "<a href='servicos-excluir.php'>";
+    echo "<a href='servicos-excluir.php?id={$linha['id']}'>";
     echo "<img src='delete.png'>";
     echo "</a>";
     echo "</td>";
