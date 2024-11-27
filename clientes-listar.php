@@ -28,11 +28,11 @@ while($linha = mysqli_fetch_assoc($resultado)){
     echo "<td> {$linha['contato']} </td>";
 
     echo "<td>";
-    echo "<a href='servicos-excluir.php?id={$linha['id']}'>";
+    echo "<a href='clientes-excluir.php?id={$linha['id']}'>";
     echo "<img src='delete.png'>";
     echo "</a>";
 
-    echo " <a href='servicos-editar.php?id={$linha['id']}'>";
+    echo " <a href='clientes-editar.php?id={$linha['id']}'>";
     echo "<img src='edit.png'>";
     echo "</a>";
 
